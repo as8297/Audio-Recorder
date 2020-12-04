@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/voiceRecorder">
+
+    <fragment
+        android:id="@+id/voiceRecorder"
+        android:name="com.example.voicerecordingapp.VoiceRecorder"
+        android:label="fragment_voice_recorder"
+        tools:layout="@layout/fragment_voice_recorder" >
+        <action
+            android:id="@+id/action_voiceRecorder_to_recordPlayer"
+            app:destination="@id/recordPlayer" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordPlayer"
+        android:name="com.example.voicerecordingapp.RecordPlayer"
+        android:label="fragment_record_player"
+        tools:layout="@layout/fragment_record_player" />
+</navigation>
